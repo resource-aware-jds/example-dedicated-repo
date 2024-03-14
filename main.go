@@ -16,10 +16,14 @@ func main() {
 		err := json.Unmarshal(task.Attributes, &unmarshalledData)
 		if err != nil {
 			logrus.Error(err)
+			return err
 		}
 
+		time.Sleep(15 * time.Second)
 		fmt.Println(unmarshalledData)
-		time.Sleep(30 * time.Second)
+
+		ctx.Success()
+		ctx.RecordResult(task.Attributes)
 		return nil
 	})
 }

@@ -17,8 +17,8 @@ github.com/kelseyhightower/envconfig v1.4.0 h1:Im6hONhd3pLkfDFsbRgu68RDNkGF1r3dv
 github.com/kelseyhightower/envconfig v1.4.0/go.mod h1:cccZRl6mQpaq41TPp5QxidR+Sa3axMbJDNb//FQX6Gg=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/resource-aware-jds/container-lib v0.0.2 h1:54gssM10U8zOqr3r2NbbCG8iF/lJtDB4AqhUkzpGNBc=
-github.com/resource-aware-jds/container-lib v0.0.2/go.mod h1:heAW24559Es/2Ck9LsDk1tXkNENeGbbMM2IX5O0a2jc=
+github.com/resource-aware-jds/container-lib v0.0.3 h1:lKwoTpWLH+H4KIF8MyYTmjZIrDkGvajtwpTrXVANi7g=
+github.com/resource-aware-jds/container-lib v0.0.3/go.mod h1:heAW24559Es/2Ck9LsDk1tXkNENeGbbMM2IX5O0a2jc=
 github.com/sirupsen/logrus v1.9.3 h1:dueUQJ1C2q9oE3F7wvmSGAaVtTmUizReu6fjN8uqzbQ=
 github.com/sirupsen/logrus v1.9.3/go.mod h1:naHLuLoDiP4jHNo9R0sCBMtWGeIprob74mVsIT4qYEQ=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
