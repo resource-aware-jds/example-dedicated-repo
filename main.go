@@ -11,8 +11,8 @@ import (
 )
 
 type TaskAttribute struct {
-	SleepTime            *time.Duration `json:"sleepTime,omitempty"`
-	MemoryAllocationSize *int           `json:"memoryAllocationSize,omitempty"`
+	SleepTime            *int `json:"sleepTime,omitempty"`
+	MemoryAllocationSize *int `json:"memoryAllocationSize,omitempty"`
 }
 
 func main() {
@@ -24,9 +24,9 @@ func main() {
 			return err
 		}
 
-		if unmarshalledData.SleepTime == nil {
-			sleepTime := 15 * time.Second
-			unmarshalledData.SleepTime = &sleepTime
+		sleepTime := 15 * time.Second
+		if unmarshalledData.SleepTime != nil {
+			sleepTime = time.Duration(*unmarshalledData.SleepTime) * time.Second
 		}
 
 		if unmarshalledData.MemoryAllocationSize == nil {
@@ -39,7 +39,7 @@ func main() {
 			fakeAllocation[i] = 0x99
 		}
 
-		time.Sleep(*unmarshalledData.SleepTime)
+		time.Sleep(sleepTime)
 		fmt.Println(unmarshalledData)
 
 		ctx.Success()
