@@ -8,9 +8,6 @@ import (
 	"github.com/resource-aware-jds/container-lib/model"
 	"github.com/resource-aware-jds/container-lib/pkg/containerlibcontext"
 	"github.com/sirupsen/logrus"
-	"os"
-	"os/signal"
-	"syscall"
 	"time"
 )
 
@@ -60,18 +57,9 @@ func main() {
 
 		}(newCtx)
 
-		// Gracefully Shutdown
-		// Make channel listen for signals from OS
-		gracefulStop := make(chan os.Signal, 1)
-		signal.Notify(gracefulStop, syscall.SIGTERM)
-		signal.Notify(gracefulStop, syscall.SIGINT)
-
-		<-gracefulStop
-
-		cancelFunc()
-
 		time.Sleep(sleepTime)
 		fmt.Println(unmarshalledData)
+		cancelFunc()
 
 		ctx.Success()
 		ctx.RecordResult(task.Attributes)
